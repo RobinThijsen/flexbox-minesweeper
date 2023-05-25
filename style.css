@@ -26,7 +26,7 @@ body {
 	background: var(--background);
 }
 img {
-	width: 80px;
+	width: 100%;
 	aspect-ratio: 1/1;
 }
 table {
@@ -56,12 +56,11 @@ tr {
 }
 td {
 	width: calc(100% / 8);
-	aspect-ratio: 1/1;
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: center;
 	justify-content: center;
-	font-size: 4em;
+	font-size: 4vw;
 	border-right: 5px dotted var(--border-dott);
 	border-bottom: 5px dotted var(--border-dott);
 	position: relative;
