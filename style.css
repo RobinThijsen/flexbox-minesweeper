@@ -45,16 +45,18 @@ tbody {
 	justify-content: center;
 	flex-wrap: wrap;
 	background: var(--background);
-	border: 6mm ridge lightgray;
+	border: 6mm ridge var(--border-dark);
 }
 tr {
+	width: 100%;
+	height: calc(100% / 8);
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 }
 td {
-	width: 80px;
-	height: 80px;
+	width: calc(100% / 8);
+	aspect-ratio: 1/1;
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: center;
