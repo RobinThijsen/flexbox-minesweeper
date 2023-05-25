@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+:root {
+	--blue: #0032ff;
+	--red: #ff0000;
+	--green: #009f6b;
+	--background: #d6d6d6; 
+	--border-dott: #404040;
+	--border-dark: #9d9d9d;
+	--border-light: #e5e5e5;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'VT323', monospace;
+}
+body {
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10em;
+	padding: 2em 0;
+	background: var(--background);
+}
+img {
+	width: 80px;
+	aspect-ratio: 1/1;
+}
+table {
+	width: 37vw;
+	height: 37vw;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+tbody {
+	width: 100%;
+	aspect-ratio: 1/1;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	background: var(--background);
+	border: 6mm ridge lightgray;
+}
+tr {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+td {
+	width: 80px;
+	height: 80px;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+	font-size: 4em;
+	border-right: 5px dotted var(--border-dott);
+	border-bottom: 5px dotted var(--border-dott);
+	position: relative;
+	cursor: pointer;
+}
+td.blue {
+	color: var(--blue);
+}
+td.green {
+	color: var(--green);
+}
+td.red {
+	color: var(--red);
+}
+td.hide::after {
+	content:"";
+	width: calc(100% - 12px);
+	height: calc(100% - 12px);
+	background-color: #c5bfbf;
+	border: 6px solid #FFF;
+	border-right: 6px solid var(--border-dark);
+	border-bottom: 6px solid var(--border-dark);
+	box-shadow: 5px 5px 0 black;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	transition: all .2s ease;
+}
+td.hide:hover::after {
+	opacity: 0;
+}
